@@ -84,6 +84,66 @@
     <article class="container" id="sandbox">
       <section id="js01">
         <h1>Output</h1>
+        <div class="row">
+          <div class="col-6">
+            We gaan een pop-up maken met javascript. We drukken op een knop en er verschijnt een pop-up
+          </div>
+          <div class="col-6">
+              <button type="button"
+                      class="btn btn-primary"
+                      onclick="alert('Er is op de knop gedrukt!')">Druk op mij!</button>
+              <button type="button" 
+                      class="btn btn-danger"
+                      onclick="mijn_alert()">Andere tekst!</button>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-6">
+            Je kunt tekst naar het browserscherm schrijven met document.write
+          </div>
+          <div class="col-6">
+            <script>
+              document.write("Deze zin wordt u aangeboden door document.write()");
+            </script>
+               <!-- Maak hier een button die met document.write() iets op een scherm schrijft -->
+               <button type="button" 
+                       class="btn btn-outline-danger"
+                       onclick="niet_klikken()">Klik niet op mij!</button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-6">
+              We kunnen ook naar de console schrijven van de browser. Dit doen we met console.log("");
+          </div>
+          <div class="col-6">
+            <script>
+              console.log("Deze tekst komt vanuit een script op index.html");
+              
+              function schrijf_naar_console() {
+                console.log("Door het drukken op een knop is deze zin naar de console geschreven!");
+              }
+
+            </script>
+            <button type="button"
+                    class="btn btn-outline-success"
+                    onclick="schrijf_naar_console();">Schrijf naar console</button>
+          </div>
+        </div>
+
+        <script>
+          function mijn_alert() {
+            alert('Deze alert komt vanuit een functie');
+            alert('Hoi');
+          }
+
+          function niet_klikken() {
+            document.write('Wanneer je document.write gebruikt nadat de pagina is geladen, wordt je bestaande pagina overschreven. Niet doen dus');
+          }       
+        </script>
+
+
       </section>
       <section id="js02">
         <h1>Comments</h1>
