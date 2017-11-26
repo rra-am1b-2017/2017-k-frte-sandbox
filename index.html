@@ -8,9 +8,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
     crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -132,14 +132,25 @@
       </div>
 
       <div class="row">
-        <div class="col-6">Je kunt ook tekst inlezen in een input tag door het drukken op een knop en deze weergeven in een paragraaf tag. Opdracht 1) maak een input-tag met id 2) maak een button 3) Maak een paragraaf tag met een id. Door het drukken op de button wordt wat je ingevuld hebt in de paragraaf tag weergegeven.</div>
+        <div class="col-6">Je kunt ook tekst inlezen in een input tag door het drukken op een knop en deze weergeven in een paragraaf tag.
+          <div class="row">
+            <div class="col-2"><h6>Opdracht</h6></div>
+            <div class="col-10">
+              <ol>
+                <li>maak een input-tag met id</li>
+                <li>maak een button</li>
+                <li>maak een paragraaf tag met een id</li>
+                <li>door het drukken op de button wordt wat je ingevuld hebt in de paragraaf tag weergegeven.</li>
+              </ol></div>
+          </div>         
+        </div>
         <div class="col-6">
           <p>
             <input type="text" id="inputTekst" placeholder="vul je naam in">
             <button type="button" class="btn btn-outline-info" onclick="printName();">Go!</button>
           </p>
           <p id="outputParagraph">
-            Mijn naam is: 
+            Mijn naam is:
           </p>
         </div>
       </div>
@@ -153,13 +164,13 @@
         function niet_klikken() {
           document.write('Wanneer je document.write gebruikt nadat de pagina is geladen, wordt je bestaande pagina overschreven. Niet doen dus');
         }
-        
-        function printName() {
-          $inputTag = document.getElementById("inputTekst");
-          alert("U heeft het volgende ingevuld: " + $inputTag.value);
 
-          $outputPara = document.getElementById("outputParagraph");
-          $outputPara.innerHTML = "Mijn naam is: " + $inputTag.value;
+        function printName() {
+          var inputTag = document.getElementById("inputTekst");
+          //alert("U heeft het volgende ingevuld: " + $inputTag.value);
+
+          var outputPara = document.getElementById("outputParagraph");
+          outputPara.innerHTML = "Mijn naam is: " + inputTag.value;
         }       
       </script>
 
@@ -167,6 +178,7 @@
     </section>
     <section id="js02">
       <h1>Comments</h1>
+
     </section>
     <section id="js03">
       <h1>String</h1>
