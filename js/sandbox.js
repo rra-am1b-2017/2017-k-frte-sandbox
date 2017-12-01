@@ -34,7 +34,11 @@ function show_array() {
 function fruit_toevoegen() {
   // alert("Hoi");
   var nieuw_fruit = document.getElementById("fruitToevoegen").value;
-  
+  //alert(nieuw_fruit);
+  fruit.push(nieuw_fruit);
+  console.log(fruit);
+  var output_fruit_toevoegen = document.getElementById("output_fruit_toevoegen");
+  output_fruit_toevoegen.innerHTML = fruit;
 }
 
 
